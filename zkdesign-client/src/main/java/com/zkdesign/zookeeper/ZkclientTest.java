@@ -15,12 +15,11 @@ import org.junit.Test;
 @Slf4j
 public class ZkclientTest {
     ZkClient zkClient;
+
     @Before
     public void init() {
-         zkClient = new ZkClient("112.126.97.242:2181", 5000, 5000);
+        zkClient = new ZkClient("112.126.97.242:2181", 5000, 5000);
     }
-
-
 
 
     @Test

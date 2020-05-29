@@ -64,8 +64,8 @@ public class MainControl implements InitializingBean {
                 .stream()
                 .map(p -> rootPath + "/" + p)// 得出子节点完整路径
                 .forEach(p -> {
-            zkClient.subscribeDataChanges(p, new DataChanges());// 数据变更的监听
-        });
+                    zkClient.subscribeDataChanges(p, new DataChanges());// 数据变更的监听
+                });
         //  监听子节点，的变更 增加，删除
         zkClient.subscribeChildChanges(rootPath, (parentPath, currentChilds) -> initSubscribeListener());
     }

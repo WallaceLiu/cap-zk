@@ -4,6 +4,7 @@ public class Lock {
     private String lockId;
     private String path;
     private boolean active;
+
     public Lock(String lockId, String path) {
         this.lockId = lockId;
         this.path = path;
