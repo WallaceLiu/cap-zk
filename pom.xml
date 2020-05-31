@@ -8,13 +8,13 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>zkdesign-client</module>
-        <module>zkdesign-hardcode</module>
-        <module>zkdesign-web</module>
-        <module>zkdesign-dubboexample</module>
-        <module>zkdesign-masterjob</module>
-        <module>zkdesign-zklock</module>
-        <module>zkdesign-rmi</module>
+        <module>cap-client</module>
+        <module>cap-hardcode</module>
+        <module>cap-web</module>
+        <module>cap-dubbo</module>
+        <module>cap-masterjob</module>
+        <module>cap-zklock</module>
+        <module>cap-rmi</module>
     </modules>
     <dependencies>
         <dependency>
