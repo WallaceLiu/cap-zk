@@ -47,15 +47,10 @@ public class DataTest {
         try {
             zooKeeper.delete(cap_path, -1);
         } catch (Exception e) {
-//            LOGGER.error(e.getMessage());
-            //Assert.fail();
+            log.error("{}", e);
         }
     }
 
-    /**
-     * @throws KeeperException
-     * @throws InterruptedException
-     */
     @Test
     public void createNodeData() throws KeeperException, InterruptedException {
         List<ACL> list = new ArrayList<>();

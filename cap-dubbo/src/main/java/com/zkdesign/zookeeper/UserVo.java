@@ -8,8 +8,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author qiurunze
- **/
+ * @author: liuning800203@aliyun.com
+ * @date: 2020/10/18
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

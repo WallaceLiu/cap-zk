@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * @author qiurunze bullock
  **/
 public class MasterResolve {
-    private String server = "112.126.97.242:2181";
+    private String server = "127.0.0.1:2181";
     private ZkClient zkClient;
     private static final String rootPath = "/qiurunze-master";
     private static final String servicePath = rootPath + "/service";
@@ -25,7 +25,7 @@ public class MasterResolve {
 
     public static MasterResolve getInstance() {
         if (resolve == null) {
-            resolve= new MasterResolve();
+            resolve = new MasterResolve();
         }
         return resolve;
     }
@@ -47,7 +47,6 @@ public class MasterResolve {
     }
 
 
-
     private void initMaster() {
         boolean existMaster = zkClient.getChildren(rootPath)
                 .stream()
@@ -60,11 +59,13 @@ public class MasterResolve {
             System.out.println("当前当选master");
         }
     }
+
     private void initListener() {
         zkClient.subscribeChildChanges(rootPath, (parentPath, currentChilds) -> {
             doElection();//  执行选举
         });
     }
+
     // 执行选举
     public void doElection() {
         Map<String, Object> childData = zkClient.getChildren(rootPath)
